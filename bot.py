@@ -97,6 +97,12 @@ async def fourfinger(update: Update, context: ContextTypes.DEFAULT_TYPE):
             parse_mode="HTML",
             reply_markup=BACK_BUTTON
         )
+        file_map = {
+    "cmd_twofinger": ("2f.jpg.JPG", "🔥 <b>2 FINGER HUD</b> 🔥\n\nBest for easy drag headshots."),
+    "cmd_threefinger": ("3f.jpg.JPG", "⚡ <b>3 FINGER HUD</b> ⚡\n\nBalanced movement and aim."),
+    "cmd_fourfinger": ("4f.jpg.JPG", "💀 <b>4 FINGER PRO HUD</b> 💀\n\nBest for pro players and fast gameplay."),
+}
+        
         
 # BACK BUTTON
 BACK_BUTTON = InlineKeyboardMarkup([
