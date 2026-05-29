@@ -59,6 +59,45 @@ MAIN_MENU = InlineKeyboardMarkup([
     ],
 ])
 
+async def twofinger(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    with open("2f.jpg.JPG", "rb") as photo:
+        await update.message.reply_photo(
+            photo=photo,
+            caption=(
+                "🔥 <b>2 FINGER HUD</b> 🔥\n\n"
+                "Best for easy drag headshots."
+                + FOOTER
+            ),
+            parse_mode="HTML",
+            reply_markup=BACK_BUTTON
+        )
+
+async def threefinger(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    with open("3f.jpg.JPG", "rb") as photo:
+        await update.message.reply_photo(
+            photo=photo,
+            caption=(
+                "⚡ <b>3 FINGER HUD</b> ⚡\n\n"
+                "Balanced movement and aim."
+                + FOOTER
+            ),
+            parse_mode="HTML",
+            reply_markup=BACK_BUTTON
+        )
+
+async def fourfinger(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    with open("4f.jpg.JPG", "rb") as photo:
+        await update.message.reply_photo(
+            photo=photo,
+            caption=(
+                "💀 <b>4 FINGER PRO HUD</b> 💀\n\n"
+                "Best for pro players and fast gameplay."
+                + FOOTER
+            ),
+            parse_mode="HTML",
+            reply_markup=BACK_BUTTON
+        )
+        
 # BACK BUTTON
 BACK_BUTTON = InlineKeyboardMarkup([
     [InlineKeyboardButton("🏠 Main Menu", callback_data="cmd_start")]
